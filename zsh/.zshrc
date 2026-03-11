@@ -4,6 +4,13 @@
 # $TERM xterm-ghostty がEC2がわからない問題、世界標準xterm-256colorに偽装する
 alias ssh='TERM=xterm-256color ssh'
 
+# autojump
+[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
+## j コマンドを効かせる為に下記が必要
+## brew でインストールした場合は下記の.zshrcへの記載の出力はないが、gitからcloneした場合はinstall時に記載されている
+## https://qiita.com/d-dai/items/54f07aeac596bf81d644
+autoload -Uz compinit && compinit -u
+
 # starship
 eval "$(starship init zsh)"
 
@@ -28,6 +35,3 @@ for widget_name in ~/.zsh/functions/*; do
 done
 
 bindkey '^r'   fh
-
-# autojump
-[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
