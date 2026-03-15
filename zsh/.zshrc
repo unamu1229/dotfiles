@@ -35,3 +35,12 @@ for widget_name in ~/.zsh/functions/*; do
 done
 
 bindkey '^r'   fh
+
+# nanoエディタを標準にする
+EDITOR=/usr/local/bin/nano
+export EDITOR
+
+# エイリアス
+alias la='ls -al'
+alias ll='ls -l'
+
