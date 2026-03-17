@@ -9,3 +9,7 @@ brew install fzf
 brew install autojump
 
 stow -t ~ zsh
+
+brew install zsh-autosuggestions
+
+brew install starship

@@ -15,7 +15,7 @@ autoload -Uz compinit && compinit -u
 eval "$(starship init zsh)"
 
 # autosuggestions
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # History search with arrow keys
 autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
