@@ -5,7 +5,7 @@
 alias ssh='TERM=xterm-256color ssh'
 
 # autojump
-[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
+[ -f $(brew --prefix)/etc/profile.d/autojump.sh ] && . $(brew --prefix)/etc/profile.d/autojump.sh
 ## j コマンドを効かせる為に下記が必要
 ## brew でインストールした場合は下記の.zshrcへの記載の出力はないが、gitからcloneした場合はinstall時に記載されている
 ## https://qiita.com/d-dai/items/54f07aeac596bf81d644
