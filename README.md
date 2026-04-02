@@ -20,6 +20,11 @@ dotfiles
 ├ README.md
 ├ install.sh
 │
+├ ghostty/
+│   └ .config/
+│       └ ghostty/
+│           └ config.ghostty
+│
 ├ zsh/
 │   └ .zshrc
 
@@ -31,9 +36,22 @@ dotfiles
 ```zsh
 stow -t ~ zsh
 ```
+Ghostty の設定ファイルを XDG 形式で展開するには以下のコマンドを実行します。
+```zsh
+stow -t ~ ghostty
+```
 `$HOME` に展開した後、zshのシンボリックリンクを削除した時
 ```zsh
 stow -t ~ -D zsh
+```
+Ghostty のシンボリックリンクを削除する場合
+```zsh
+stow -t ~ -D ghostty
+```
+
+まとめて展開する場合
+```zsh
+stow -t ~ zsh ghostty
 ```
 
 ---
@@ -67,6 +85,25 @@ export AWS_PROFILE=dev
 ```
 
 このファイルは **git 管理しません**。
+
+Ghostty の設定は以下の `XDG` パスを管理対象にしています。
+
+```text
+~/.config/ghostty/config.ghostty
+```
+
+`Ghostty 1.3.1` 同梱ドキュメントでは、macOS では
+`~/Library/Application Support/com.mitchellh.ghostty/config.ghostty`
+が `XDG` パスより優先されます。
+
+そのため `install.sh` では、以下の既存ファイルがある場合に
+`*.bak.YYYYMMDDHHMMSS` としてバックアップしてから `Stow` でリンク化します。
+
+```text
+~/Library/Application Support/com.mitchellh.ghostty/config.ghostty
+~/Library/Application Support/com.mitchellh.ghostty/config
+~/.config/ghostty/config.ghostty
+```
 
 ---
 

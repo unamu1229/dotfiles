@@ -1,0 +1,13 @@
+# Ghostty config managed by dotfiles.
+# XDG 形式では以下に展開されます:
+# ~/.config/ghostty/config.ghostty
+#
+# macOS では ~/Library/Application Support/com.mitchellh.ghostty/config.ghostty
+# が優先されるため、install.sh で旧配置を退避してからこの設定へ移行します。
+#
+# 必要な設定をこのファイルに追記して使います。
+# 例:
+# theme = light:GitHub Light, dark:GitHub Dark
+# font-family = Iosevka
+
+font-size = 15
