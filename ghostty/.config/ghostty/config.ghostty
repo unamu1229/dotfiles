@@ -10,4 +10,8 @@
 # theme = light:GitHub Light, dark:GitHub Dark
 # font-family = Iosevka
 
-font-size = 15
+theme = 0x96f
+
+font-size = 16
+
+split-divider-color = #666666
