@@ -1,0 +1,3 @@
+bind ^F forward main
+bind ^B back main
+
