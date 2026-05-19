@@ -1,2 +1,5 @@
 .idea
 ghostty/.config/github-copilot
+
+# jetbrains系IDEAが生成するファイル
+**/.config/jgit/
